@@ -1,7 +1,5 @@
-name: Lighthouse
-on:
-  - push
-
+name: CI
+on: [push]
 jobs:
   lhci:
     name: Lighthouse
