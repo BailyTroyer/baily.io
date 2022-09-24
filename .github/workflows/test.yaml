@@ -41,8 +41,7 @@ jobs:
           pnpm run build
 
       - name: Run tests and collect coverage
-        run: pnpm run test -- --coverage
-        working-directory: ./apps/web
+        run: pnpm run test:web
 
       - name: Upload coverage reports to Codecov with GitHub Action
         uses: codecov/codecov-action@v3
