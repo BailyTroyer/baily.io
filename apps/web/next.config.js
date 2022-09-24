@@ -30,6 +30,8 @@ const sentryWebpackPluginOptions = {
   //   release, url, org, project, authToken, configFile, stripPrefix,
   //   urlPrefix, include, ignore
 
+  // We need to disable sentry when running CI checks:
+  // https://github.com/orgs/vercel/discussions/583
   dryRun: process.env.VERCEL_ENV !== "production",
 
   silent: true, // Suppresses all logs
