@@ -30,9 +30,11 @@ importers:
       '@trpc/next': ^9.27.2
       '@trpc/react': ^9.27.2
       '@trpc/server': ^9.27.2
+      '@types/cors': ^2.8.12
       '@types/jest': ^29.0.2
       '@types/react': 18.0.17
       '@types/testing-library__jest-dom': ^5.14.5
+      cors: ^2.8.5
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       framer-motion: ^6
@@ -64,6 +66,7 @@ importers:
       '@trpc/next': 9.27.2_uxi3fykuxaglbetcrbfd4dokya
       '@trpc/react': 9.27.2_e7pohnznr4qdgpqc5x4q3pmfcu
       '@trpc/server': 9.27.2
+      cors: 2.8.5
       framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
       next: 12.3.0_ir3quccc6i62x6qn6jjhyjjiey
       next-auth: 4.12.0_c3hne4hwj64hb7tofigd3bvkji
@@ -78,6 +81,7 @@ importers:
       '@next/bundle-analyzer': 12.3.1
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
+      '@types/cors': 2.8.12
       '@types/jest': 29.0.3
       '@types/react': 18.0.17
       '@types/testing-library__jest-dom': 5.14.5
@@ -2503,6 +2507,10 @@ packages:
       '@babel/types': 7.19.0
     dev: true
 
+  /@types/cors/2.8.12:
+    resolution: {integrity: sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==}
+    dev: true
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -3226,6 +3234,14 @@ packages:
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: false
+
+  /cors/2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
     dev: false
 
   /cosmiconfig/7.0.1:
@@ -7295,6 +7311,11 @@ packages:
       '@types/istanbul-lib-coverage': 2.0.4
       convert-source-map: 1.8.0
     dev: true
+
+  /vary/1.1.2:
+    resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
+    engines: {node: '>= 0.8'}
+    dev: false
 
   /vfile-message/3.1.2:
     resolution: {integrity: sha512-QjSNP6Yxzyycd4SVOtmKKyTsSvClqBPJcd00Z0zuPj3hOIjg0rUPG6DbFGPvUKRgYyaIWLPKpuEclcuvb3H8qA==}
