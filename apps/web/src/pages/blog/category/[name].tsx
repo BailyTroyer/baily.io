@@ -29,14 +29,12 @@ const Category: CustomNextPage = () => {
         as="main"
         display="flex"
         flexDir="column"
-        flex={1}
         alignItems="flex-start"
         maxW="4xl"
-        p={3}
-        mt={8}
+        my={4}
         gap={5}
       >
-        <Text as="h1" fontSize="3xl" fontWeight={800}>
+        <Text as="h1" fontSize="4xl" fontWeight={800}>
           Latest {name} Posts
         </Text>
 

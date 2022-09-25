@@ -94,14 +94,13 @@ export default function Nav() {
   return (
     <Box
       bg={useColorModeValue("gray.100", "gray.900")}
-      px={4}
       sx={{
         position: "sticky",
         top: "0",
       }}
       zIndex={3}
     >
-      <Container maxW="4xl" p={0}>
+      <Container maxW="4xl">
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -111,7 +110,7 @@ export default function Nav() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Baily.io</Box>
+            <Box fontWeight={600}>Baily.io</Box>
             <HStack
               as={"nav"}
               spacing={4}

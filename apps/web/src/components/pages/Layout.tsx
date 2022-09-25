@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 
 interface LayoutProps {
@@ -14,7 +15,7 @@ export default function Layout({
   footer = null,
 }: LayoutProps) {
   return (
-    <div>
+    <Box minH="100vh" display="flex" flex={1} flexDir="column">
       <Head>
         <title>baily.io</title>
         <meta name="description" content="Baily's personal site" />
@@ -25,6 +26,6 @@ export default function Layout({
       {children}
 
       {footer}
-    </div>
+    </Box>
   );
 }

@@ -7,7 +7,7 @@ import Layout from "../components/pages/Layout";
 const NotFound: NextPage = () => {
   return (
     <Layout>
-      <Container as="main" display="flex" flex={1} maxW="2xl" centerContent>
+      <Container as="main" display="flex" flex={1} centerContent>
         <Center display="flex" flex={1}>
           <VStack>
             <Text fontSize="3xl">Not Found</Text>
