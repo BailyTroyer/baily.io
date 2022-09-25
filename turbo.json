@@ -1,8 +1,11 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
+    "generate": {
+      "dependsOn": ["^generate"]
+    },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "generate"],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {
@@ -13,7 +16,13 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": []
+      "dependsOn": ["lint", "build"]
+    },
+    "db:migrate:dev": {
+      "outputs": []
+    },
+    "db:seed": {
+      "outputs": []
     }
   },
   "globalDependencies": [],

@@ -11,16 +11,24 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "test:web": "turbo run test --scope=\"web\" -- --coverage"
+    "test": "turbo run test -- --coverage",
+    "db:migrate:dev": "turbo run db:migrate:dev",
+    "db:seed": "turbo run db:seed",
+    "generate": "turbo run generate"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "tsx": "^3.9.0"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "pnpm@7.11.0"
+  "packageManager": "pnpm@7.11.0",
+  "prisma": {
+    "schema": "apps/web/prisma/schema.prisma",
+    "seed": "tsx apps/web/prisma/seed.ts"
+  }
 }
