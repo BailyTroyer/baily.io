@@ -16,5 +16,11 @@
       "dependsOn": []
     }
   },
-  "globalDependencies": ["$NODE_ENV"]
+  "globalDependencies": [],
+  "globalEnv": [
+    "NODE_ENV",
+    "SENTRY_DSN",
+    "NEXT_PUBLIC_POSTHOG_KEY",
+    "NEXT_PUBLIC_SENTRY_DSN"
+  ]
 }

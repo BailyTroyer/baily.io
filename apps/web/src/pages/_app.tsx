@@ -3,7 +3,7 @@ import { usePostHog } from "../components/hooks/usePosthog";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   usePostHog(
-    "phc_darhmDxr9LpwRMsm9smBOrLIDCYduUvDugY4IakBDyA",
+    process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
     { api_host: "https://app.posthog.com" },
     "baily.io"
   );
