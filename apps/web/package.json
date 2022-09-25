@@ -10,20 +10,29 @@
     "test": "TZ=EST jest",
     "analyze": "ANALYZE=true next build",
     "db:push:prod": "prisma db push",
+    "db:seed": "prisma db seed",
     "generate": "prisma generate"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.10",
+    "@chakra-ui/react": "^2.3.4",
+    "@chakra-ui/styled-system": "^2.3.3",
+    "@chakra-ui/system": "^2.2.11",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@prisma/client": "^4.3.1",
     "@sentry/nextjs": "^7.13.0",
     "@trpc/client": "^9.27.2",
     "@trpc/next": "^9.27.2",
     "@trpc/react": "^9.27.2",
     "@trpc/server": "^9.27.2",
+    "framer-motion": "^6",
     "next": "12.3.0",
     "next-auth": "^4.12.0",
     "posthog-js": "^1.31.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.3",
     "react-query": "^3.39.2",
     "zod": "3.19.1"
   },
@@ -42,6 +51,11 @@
     "jest-presets": "workspace:*",
     "prisma": "^4.3.1",
     "tsconfig": "workspace:*",
+    "tsx": "^3.9.0",
     "typescript": "^4.8.3"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma",
+    "seed": "tsx prisma/seed.ts"
   }
 }

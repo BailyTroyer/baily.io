@@ -16,7 +16,7 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": ["lint", "build"]
+      "dependsOn": []
     },
     "db:migrate:dev": {
       "outputs": []

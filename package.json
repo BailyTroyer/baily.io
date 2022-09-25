@@ -20,16 +20,11 @@
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
-    "turbo": "latest",
-    "tsx": "^3.9.0"
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "pnpm@7.11.0",
-  "prisma": {
-    "schema": "apps/web/prisma/schema.prisma",
-    "seed": "tsx apps/web/prisma/seed.ts"
-  }
+  "packageManager": "pnpm@7.11.0"
 }

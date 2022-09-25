@@ -1,10 +1,11 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import { withTRPC } from "@trpc/next";
 import { NextPage } from "next";
 import { SessionProvider } from "next-auth/react";
 import { AppProps } from "next/app";
 
-import AuthGuard from "../components/AuthGuard";
 import { usePostHog } from "../components/hooks/usePosthog";
+import AuthGuard from "../components/pages/AuthGuard";
 import { ServerRouter } from "../server/routers/_app";
 
 export type CustomNextPage = NextPage & {
@@ -24,13 +25,15 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <SessionProvider session={pageProps.session}>
-      {Component.requireAuth ? (
-        <AuthGuard>
+      <ChakraProvider>
+        {Component.requireAuth ? (
+          <AuthGuard>
+            <Component {...pageProps} />
+          </AuthGuard>
+        ) : (
           <Component {...pageProps} />
-        </AuthGuard>
-      ) : (
-        <Component {...pageProps} />
-      )}
+        )}
+      </ChakraProvider>
     </SessionProvider>
   );
 };
