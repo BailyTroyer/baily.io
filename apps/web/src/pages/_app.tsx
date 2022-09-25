@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+
 import { usePostHog } from "../components/hooks/usePosthog";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
